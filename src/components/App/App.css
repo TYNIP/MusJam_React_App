@@ -1,0 +1,44 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background: url("JammmingBackground.png") no-repeat center;
+}
+.App {
+  text-align: center;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-color: rgba(118, 143, 214, 0.5);
+  padding: 1%;
+}
+.App-header h1{
+  margin: 0;
+  padding: 0;
+}
+.App-header span{
+  color: #ACDE8E;
+}
+.AppPlayList {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2%;
+}
+
+@media only screen and (max-width: 1020px) {
+  .AppPlayList{
+    align-items: center;
+    flex-direction: column;
+  }
+}
+

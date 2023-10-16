@@ -1,0 +1,64 @@
+import React, { useCallback, useState } from 'react';
+/* COMPONENTS */
+import SearchBar from '../SearchBars/SearchBar';
+import SearchResults from '../SearchResults/SearchResults';
+import PlayList from '../Playlist/Playlist';
+import SpotifyApi from '../../utils/Spotify';
+/* Styles */
+import './App.css';
+
+/* APP */
+function App() {
+  /* FUNCTIONS */
+  const [searchResults, setSearchResults] = useState([]);
+  const [playlistName, setPlaylistName] = useState("New Playlist");
+  const [playlistTracks, setPlaylistTracks] = useState([]);
+  /* FOR SEARCHBAR */
+  //Search for track using the Spotify Api
+  const search = useCallback();
+
+  /* For Search Results */
+  //Add tracks to playlist
+  const addTrack = useCallback(track=>{
+    if(playlistTracks.some(saved=> saved.id === track.id)){
+      return;
+    }
+    setPlaylistTracks((prevTracks)=>[... prevTracks, track])
+  }, [playlistTracks]);
+  
+  /* FOR PLAYLIST */
+  //Update name of playlist
+  const updatePlaylistName = useCallback(name=>{
+    setPlaylistName(name);
+  },[])
+
+  //Remove tracks by filtering the diference between the current list and past one
+  const removeTrack = useCallback(track=>{
+    setPlaylistTracks((prevTracks)=>prevTracks.filter(currentTrack=>currentTrack.id !== track.id));
+  },[]);
+
+  //Save playlist using the spotify API
+  const savePlaylist = useCallback();
+
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Spo<span>ty</span>jam</h1>
+      </header>
+      <SearchBar onSearch={search}></SearchBar>
+      <div className='AppPlayList'>
+        <SearchResults searchResults={searchResults} onAdd={addTrack}/>
+        <PlayList 
+          playlistName={playlistName}
+          playlistTracks={playlistTracks}
+          onChangeName={updatePlaylistName}
+          onRemove={removeTrack}
+          onSave={savePlaylist}
+        />
+      </div>
+    </div>
+  );
+}
+
+export default App;
