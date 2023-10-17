@@ -13,9 +13,12 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [playlistName, setPlaylistName] = useState("New Playlist");
   const [playlistTracks, setPlaylistTracks] = useState([]);
+  
   /* FOR SEARCHBAR */
   //Search for track using the Spotify Api
-  const search = useCallback();
+  const search = useCallback((term)=>{
+    SpotifyApi.search(term).then(setSearchResults);
+  },[]);
 
   /* For Search Results */
   //Add tracks to playlist
@@ -23,7 +26,7 @@ function App() {
     if(playlistTracks.some(saved=> saved.id === track.id)){
       return;
     }
-    setPlaylistTracks((prevTracks)=>[... prevTracks, track])
+    setPlaylistTracks((prevTracks)=>[...prevTracks, track])
   }, [playlistTracks]);
   
   /* FOR PLAYLIST */
@@ -38,7 +41,13 @@ function App() {
   },[]);
 
   //Save playlist using the spotify API
-  const savePlaylist = useCallback();
+  const savePlaylist = useCallback(()=>{
+    const trackUris = playlistTracks.map(track=>track.uri)
+    SpotifyApi.savePlaylist(playlistName, trackUris).then(()=>{
+      setPlaylistName("New Playlist");
+      setPlaylistTracks([]);
+    })
+  },[playlistName, playlistTracks]);
 
 
   return (
@@ -52,7 +61,7 @@ function App() {
         <PlayList 
           playlistName={playlistName}
           playlistTracks={playlistTracks}
-          onChangeName={updatePlaylistName}
+          onNameChange={updatePlaylistName}
           onRemove={removeTrack}
           onSave={savePlaylist}
         />

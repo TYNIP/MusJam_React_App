@@ -7,18 +7,18 @@ const Tracklist = (props) => {
     return(
         /* Iterate for each class that is present in Track*/
         <div className='trackList'>
-            {/* {
+            {
                 props.tracks.map((track)=>{
                     return (
                         <Track
                             track={track}
                             key={track.id}
-                            onAdd={track.onAdd}
-                            isRemoval={track.isRemoval}
-                            onRemove={track.onRemove}
+                            onAdd={props.onAdd}
+                            isRemoval={props.isRemoval}
+                            onRemove={props.onRemove}
                         />
                     );
-                })}; */}
+                })}
         </div>
     );
 };
