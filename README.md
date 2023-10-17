@@ -77,4 +77,4 @@ That's it! SpotyJam empowers you to organize and enjoy your music on Spotify wit
 - Icon from: [icon-icons](https://icon-icons.com/).
 - Api from: [Spotify API](https://developer.spotify.com/documentation/web-api). 
 
-***Note: Project not realted to any organisation | Any kind of data is stored.***
+***Note: Project not realted to any organisation | No type of data is stored..***
