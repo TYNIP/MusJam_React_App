@@ -1,5 +1,5 @@
 /* SETUP */
-const clientId = '017f26800edb40bbba7ec7d56664730a'; //Spotify Clien Id
+const clientId = ''; //Spotify Clien Id
 const redirectUri = 'http://localhost:3000/'; //Accepted spotify redirect URI
 let accessToken; //Spotify Acces Token
 
