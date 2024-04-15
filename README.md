@@ -1,12 +1,12 @@
-# SpotyJam - Your Spotify Playlist Manager
+# MusJam - Your Spotify Playlist Manager
 
-SpotyJam is a React app that uses the Spotify API to give users the ability to manage their playlists with ease. With SpotyJam, you can search for tracks, create new playlists, add or remove songs, and update your existing playlists, in a faster and easy way.
+MusicJam is a React app that uses the Spotify API to give users the ability to manage their playlists with ease. With MusJam, you can search for tracks, create new playlists, add or remove songs, and update your existing playlists, in a faster and easy way.
 
-Website: [SpotyJam](https://spotyjam.netlify.app/) 
+Website: [MusJam](https://musjam.netlify.app/) 
 
 ## Features
 
-- **Authentication**: SpotyJam authenticates the user by asking for access to their Spotify account. This is required for managing playlists effectively.
+- **Authentication**: MusJam authenticates the user by asking for access to their Spotify account. This is required for managing playlists effectively.
 
 - **Search Bar**: The search bar allows users to search for tracks or related tracks using the Spotify API. You can search for your favorite songs and add them to your playlists.
 
@@ -18,10 +18,10 @@ Website: [SpotyJam](https://spotyjam.netlify.app/)
 
 # How to Use
 
-SpotyJam is designed to be a user-friendly application that allows you to manage your Spotify playlists effortlessly. Follow these steps to get started and make the most of the app:
+MusJam is designed to be a user-friendly application that allows you to manage your Spotify playlists effortlessly. Follow these steps to get started and make the most of the app:
 
 1. **Authentication**:
-   - When you first access SpotyJam, you will be prompted to authenticate your Spotify account.
+   - When you first access MusJam, you will be prompted to authenticate your Spotify account.
    - Click the "Log In" button and follow the instructions to log in to your Spotify account.
    - You will be asked to grant access to your account, specifically for managing playlists. This access is necessary for the app to function properly.
 

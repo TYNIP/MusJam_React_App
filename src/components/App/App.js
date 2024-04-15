@@ -4,6 +4,7 @@ import SearchBar from '../SearchBars/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import PlayList from '../Playlist/Playlist';
 import SpotifyApi from '../../utils/Spotify';
+import Powered from '../powered/Powered';
 /* Styles */
 import './App.css';
 
@@ -53,8 +54,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Spo<span>ty</span>jam</h1>
+        <h1>Mu<span>sJ</span>am</h1>
+        <span style={{fontSize: '20px'}}>Developed by: <a href='https://github.com/TYNIP' target='_blank' rel='noreferrer'>TYNIP</a></span>
       </header>
+      <Powered/>
       <SearchBar onSearch={search}></SearchBar>
       <div className='AppPlayList'>
         <SearchResults searchResults={searchResults} onAdd={addTrack}/>

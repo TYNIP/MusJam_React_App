@@ -1,6 +1,6 @@
 /* SETUP */
 const clientId = ''; //client id key
-const redirectUri = 'https://spotyjam.netlify.app/'; 
+const redirectUri = 'https://musjam.netlify.app/'; 
 let accessToken; //Spotify Acces Token
 
 /* General function */

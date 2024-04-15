@@ -27,8 +27,9 @@ const Track = ({ onAdd, onRemove, isRemoval, track }) => {
     return (
       <div className='Track'>
         <div className='Track-information'>
-          <h3>{track.name}</h3>
-          <p>{track.artist} | {track.album}</p>
+          <h3><a href={`https://open.spotify.com/intl-es/track/${track.id}`} target='_blank' rel='noreferrer'>{track.name}</a></h3>
+          
+          <p><a href={`https://open.spotify.com/search/${track.artist}`} target='_blank' rel='noreferrer' >{track.artist}</a> | <a href={`https://open.spotify.com/search/${track.album}`} target='_blank' rel='noreferrer'>{track.album}</a></p>
         </div>
         {renderTracks()}
       </div>
