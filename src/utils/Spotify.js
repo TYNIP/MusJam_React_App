@@ -1,5 +1,5 @@
 /* SETUP */
-const clientId =  process.env.CLIENT_KEY;
+const clientId = ''; //client id key
 const redirectUri = 'https://spotyjam.netlify.app/'; 
 let accessToken; //Spotify Acces Token
 
